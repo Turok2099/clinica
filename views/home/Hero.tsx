@@ -7,10 +7,11 @@ export default function Hero() {
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <Image
-          src="https://res.cloudinary.com/dxbtafe9u/image/upload/v1779227794/back-hero_hk9cfp.png"
+          src="https://res.cloudinary.com/dxbtafe9u/image/upload/f_auto,q_auto/v1779227794/back-hero_hk9cfp.png"
           alt="Clínica Hero Background"
           fill
           priority
+          unoptimized
           sizes="100vw"
           className="object-cover object-center scale-105"
         />
