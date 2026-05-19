@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Clinical Pure White: Main light background */
+  --color-background: #F8FAFC;
+  /* Deep Slate Blue: Main typography */
+  --color-foreground: #0F172A;
+
+  /* Primary & Brand Colors */
+  --color-primary: #0F172A;
+  --color-primary-slate: #1E293B;
+
+  /* Accent Colors (Green Accent) */
+  --color-accent: #17b267;
+  --color-accent-hover: #10854d;
+
+  /* Secondary Colors (Soft Sage) */
+  --color-secondary: #F1F5F9;
+  --color-secondary-border: #E2E8F0;
+
+  --font-sans: var(--font-montserrat);
+  --font-anton: var(--font-anton);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Force light mode background across all elements that might inherit body background */
+html,
+body,
+:root {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  color-scheme: light !important;
 }
