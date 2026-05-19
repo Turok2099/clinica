@@ -12,6 +12,7 @@ export default function Hero() {
           fill
           priority
           unoptimized
+          crossOrigin="anonymous"
           sizes="100vw"
           className="object-cover object-center scale-105"
         />
