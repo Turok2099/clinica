@@ -35,7 +35,7 @@ export default function Hero() {
                 La forma más rápida para bajar de peso
               </h1>
               {/* Bullets: Top Right on mobile, normal flow on desktop */}
-              <div className="absolute top-20 right-6 lg:static flex flex-col items-end lg:items-start gap-2 lg:gap-4 mt-4 z-20">
+              <div className="absolute top-16 right-6 lg:static flex flex-col items-end lg:items-start gap-2 lg:gap-4 lg:mt-4 z-20">
                 {[
                   "Más rápido",
                   "Sin rebote",
