@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Check, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -43,9 +44,7 @@ export default function Hero() {
                 ].map((item, i) => (
                   <div key={i} className="flex flex-row-reverse lg:flex-row items-center gap-2 lg:gap-4">
                     <div className="flex-shrink-0 w-5 h-5 lg:w-10 lg:h-10 rounded-full bg-accent/40 lg:bg-accent/10 border border-accent/50 lg:border-accent/20 flex items-center justify-center shadow-sm">
-                      <svg className="w-3 h-3 lg:w-6 lg:h-6 text-white lg:text-accent" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
+                      <Check className="w-4 h-4 lg:w-6 lg:h-6 text-white lg:text-accent" strokeWidth={3} />
                     </div>
                     {/* Feature text: White on mobile, Dark on desktop */}
                     <span className="text-base lg:text-4xl font-extrabold text-white lg:text-slate-800 leading-tight drop-shadow-md lg:drop-shadow-none text-right lg:text-left">
@@ -64,9 +63,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
               <button className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-slate-900 font-extrabold rounded-2xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-1 hover:shadow-accent/40 flex justify-center items-center gap-2 cursor-pointer">
                 Test Online Gratis
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
+                <ArrowRight className="w-5 h-5" strokeWidth={2} />
               </button>
             </div>
 
@@ -94,9 +91,7 @@ export default function Hero() {
             {/* Small floating trust badge */}
             <div className="absolute bottom-8 -left-4 lg:left-0 bg-white p-4 rounded-2xl shadow-xl shadow-slate-200/50 flex items-center gap-4 transition-transform hover:-translate-y-1">
               <div className="w-12 h-12 rounded-full bg-accent/15 flex items-center justify-center">
-                <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
+                  <ShieldCheck className="w-6 h-6 text-accent" strokeWidth={2} />
               </div>
               <div>
                 <p className="text-sm font-bold text-slate-900">Resultados Garantizados</p>

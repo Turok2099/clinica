@@ -1,4 +1,5 @@
 import React from 'react';
+import { Microscope, Activity, HeartPulse, ArrowRight } from 'lucide-react';
 
 export default function Methodology() {
   return (
@@ -21,9 +22,7 @@ export default function Methodology() {
           {/* Pillar 1 */}
           <div className="flex flex-col bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
-              <svg className="w-7 h-7 text-accent" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-              </svg>
+              <Microscope className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
             <h3 className="text-xl font-bold text-[#0F172A] mb-4">
               Diagnóstico Biológico y de Receptores
@@ -41,9 +40,7 @@ export default function Methodology() {
           {/* Pillar 2 */}
           <div className="flex flex-col bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 relative z-10">
-              <svg className="w-7 h-7 text-accent" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+              <Activity className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
             <h3 className="text-xl font-bold text-[#0F172A] mb-4 relative z-10">
               Regulación Hormonal Avanzada
@@ -68,9 +65,7 @@ export default function Methodology() {
           {/* Pillar 3 */}
           <div className="flex flex-col bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
-              <svg className="w-7 h-7 text-accent" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
+              <HeartPulse className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
             <h3 className="text-xl font-bold text-[#0F172A] mb-4">
               Reprogramación de Estilo de Vida
@@ -94,9 +89,7 @@ export default function Methodology() {
           </p>
           <button className="px-8 py-4 bg-[#0F172A] hover:bg-[#1E293B] text-white font-extrabold rounded-2xl shadow-lg transition-all hover:-translate-y-1 flex justify-center items-center gap-3 cursor-pointer group">
             Evaluar mi Perfil Metabólico
-            <svg className="w-5 h-5 text-accent transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
+            <ArrowRight className="w-5 h-5 text-accent transition-transform group-hover:translate-x-1" strokeWidth={2} />
           </button>
         </div>
 

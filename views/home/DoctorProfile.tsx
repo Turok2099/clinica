@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Lightbulb, Stethoscope, Globe, ArrowRight } from 'lucide-react';
 
 export default function DoctorProfile() {
   return (
@@ -47,9 +48,7 @@ export default function DoctorProfile() {
             {/* Hito 1: Eli Lilly y GLP-1/GIP */}
             <div className="flex gap-5 items-start">
               <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center shadow-sm">
-                <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
+                <Lightbulb className="w-6 h-6 text-accent" strokeWidth={2} />
               </div>
               <div>
                 <h3 className="text-slate-900 font-bold text-lg mb-1">
@@ -64,9 +63,7 @@ export default function DoctorProfile() {
             {/* Hito 2: Cirugía General */}
             <div className="flex gap-5 items-start">
               <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center shadow-sm">
-                <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+                <Stethoscope className="w-6 h-6 text-accent" strokeWidth={2} />
               </div>
               <div>
                 <h3 className="text-slate-900 font-bold text-lg mb-1">
@@ -81,9 +78,7 @@ export default function DoctorProfile() {
             {/* Hito 3: Afiliaciones */}
             <div className="flex gap-5 items-start">
               <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center shadow-sm">
-                <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+                <Globe className="w-6 h-6 text-accent" strokeWidth={2} />
               </div>
               <div>
                 <h3 className="text-slate-900 font-bold text-lg mb-1">
@@ -104,9 +99,7 @@ export default function DoctorProfile() {
             </p>
             <button className="inline-flex items-center justify-center bg-accent hover:bg-accent-hover text-slate-900 font-extrabold px-8 py-4 rounded-2xl transition-all duration-200 shadow-lg shadow-accent/25 hover:-translate-y-1 hover:shadow-accent/40 w-full sm:w-auto text-center gap-2 cursor-pointer">
               Agendar Consulta de Evaluación
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              <ArrowRight className="w-5 h-5" strokeWidth={2} />
             </button>
           </div>
 
