@@ -1,6 +1,7 @@
 import Header from './Header';
 import Hero from './Hero';
 import Methodology from './Methodology';
+import DoctorProfile from './DoctorProfile';
 
 export default function HomeView() {
   return (
@@ -8,6 +9,7 @@ export default function HomeView() {
       <Header />
       <Hero />
       <Methodology />
+      <DoctorProfile />
     </main>
   );
 }
