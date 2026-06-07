@@ -1,13 +1,13 @@
 import React from "react";
 import {
-  Microscope,
-  Activity,
   HeartPulse,
   ArrowRight,
   Calendar,
   Award,
   HeartHandshake,
   Sparkles,
+  ClipboardList,
+  Target,
 } from "lucide-react";
 import BMICalculator from "./BMICalculator";
 
@@ -94,78 +94,48 @@ export default function Methodology() {
           {/* Pillar 1 */}
           <div className="flex flex-col bg-white rounded-3xl p-8 border border-slate-100 shadow-md shadow-slate-200/30 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
-              <Microscope className="w-7 h-7 text-accent" strokeWidth={2} />
+              <ClipboardList className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-4">
-              Diagnóstico Biológico y de Receptores
+              1. Conocemos tu historia
             </h3>
-            <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
-              <p>
-                <strong className="text-slate-800">De qué trata:</strong> Antes
-                de cualquier tratamiento, el especialista analiza tu perfil
-                endocrino, niveles de insulina y hormonas del hambre.
-              </p>
-              <p>
-                <strong className="text-slate-800">Por qué importa:</strong> No
-                todos los metabolismos responden igual. Identificamos
-                exactamente qué moduladores necesita tu cuerpo.
-              </p>
-            </div>
+            <p className="text-slate-600 text-sm leading-relaxed font-medium">
+              Analizamos tus antecedentes médicos y familiares, factores genéticos, hábitos de vida, signos, síntomas y objetivos de salud para comprender tu situación de manera integral.
+            </p>
           </div>
 
           {/* Pillar 2 */}
           <div className="flex flex-col bg-white rounded-3xl p-8 border border-slate-100 shadow-md shadow-slate-200/30 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 relative z-10">
-              <Activity className="w-7 h-7 text-accent" strokeWidth={2} />
+              <HeartPulse className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-4 relative z-10">
-              Regulación Hormonal Avanzada
+              2. Evaluamos tu salud cardiometabólica
             </h3>
-            <div className="space-y-4 text-slate-600 text-sm leading-relaxed relative z-10">
-              <p>
-                <strong className="text-slate-800">De qué trata:</strong> Aquí
-                es donde entra la ciencia de vanguardia. Ajustamos y titulamos
-                la dosificación de terapias médicas para silenciar el "hambre
-                cerebral" y estabilizar la glucosa.
-              </p>
-              <p>
-                <strong className="text-slate-800">Por qué importa:</strong> La
-                medicina es solo el vehículo; la pericia del médico para
-                dosificarla sin efectos secundarios es la clave del éxito.
-              </p>
-            </div>
-
-            {/* Subtle compliance note */}
-            <div className="mt-8 pt-6 border-t border-slate-100 relative z-10">
-              <p className="text-[11px] text-slate-400 font-medium leading-tight">
-                * Utilizamos exclusivamente terapias reguladas
-                internacionalmente (como agonistas de receptores GLP-1 y GIP)
-                bajo estricto criterio y prescripción médica.
-              </p>
-            </div>
+            <p className="text-slate-600 text-sm leading-relaxed font-medium relative z-10">
+              Realizamos mediciones clave como composición corporal, circunferencia de cintura, presión arterial y otros indicadores relevantes. Además, tendrás acceso a beneficios exclusivos en estudios de laboratorio para complementar tu evaluación.
+            </p>
           </div>
 
           {/* Pillar 3 */}
           <div className="flex flex-col bg-white rounded-3xl p-8 border border-slate-100 shadow-md shadow-slate-200/30 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
-              <HeartPulse className="w-7 h-7 text-accent" strokeWidth={2} />
+              <Target className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-4">
-              Reprogramación de Estilo de Vida
+              3. Diseñamos tu plan personalizado
             </h3>
-            <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
-              <p>
-                <strong className="text-slate-800">De qué trata:</strong>{" "}
-                Monitoreo médico y acompañamiento para asegurar que la pérdida
-                de peso provenga de tejido graso, protegiendo tu masa muscular.
-              </p>
-              <p>
-                <strong className="text-slate-800">Por qué importa:</strong>{" "}
-                Diseñamos la estrategia de salida para que los resultados sean
-                permanentes y no dependas de un tratamiento de por vida.
-              </p>
-            </div>
+            <p className="text-slate-600 text-sm leading-relaxed font-medium">
+              Con base en tus resultados, nuestros especialistas desarrollan una estrategia adaptada a tus necesidades y objetivos, enfocada en mejorar tu salud y bienestar a largo plazo.
+            </p>
           </div>
+        </div>
+
+        {/* Subtle compliance note below the grid */}
+        <div className="mt-8 text-center max-w-2xl mx-auto mb-16">
+          <p className="text-[11px] text-slate-400 font-medium leading-relaxed">
+            * Utilizamos exclusivamente terapias médicas reguladas internacionalmente (como agonistas de receptores GLP-1 y GIP) bajo estricto criterio y prescripción médica.
+          </p>
         </div>
 
         {/* BMI Calculator */}
