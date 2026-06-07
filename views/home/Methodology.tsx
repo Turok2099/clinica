@@ -10,6 +10,7 @@ import {
   Target,
 } from "lucide-react";
 import BMICalculator from "./BMICalculator";
+import ProtocolCTA from "./ProtocolCTA";
 
 export default function Methodology() {
   return (
@@ -141,20 +142,8 @@ export default function Methodology() {
         {/* BMI Calculator */}
         <BMICalculator />
 
-        {/* Micro-CTA Footer */}
-        <div className="mt-24 flex flex-col items-center text-center">
-          <p className="text-xl font-bold text-slate-900 mb-8">
-            El protocolo idóneo para ti depende de tu biología. Descúbrelo en 60
-            segundos.
-          </p>
-          <button className="px-8 py-4 bg-primary hover:bg-accent text-white font-extrabold rounded-2xl shadow-lg shadow-primary/20 hover:shadow-accent/30 transition-all duration-300 hover:-translate-y-1 flex justify-center items-center gap-3 cursor-pointer group">
-            Evaluar mi Perfil Metabólico
-            <ArrowRight
-              className="w-5 h-5 text-accent transition-transform group-hover:translate-x-1"
-              strokeWidth={2}
-            />
-          </button>
-        </div>
+        {/* Protocol PDF CTA */}
+        <ProtocolCTA />
       </div>
     </section>
   );
