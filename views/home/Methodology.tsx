@@ -9,6 +9,7 @@ import {
   HeartHandshake,
   Sparkles,
 } from "lucide-react";
+import BMICalculator from "./BMICalculator";
 
 export default function Methodology() {
   return (
@@ -166,6 +167,9 @@ export default function Methodology() {
             </div>
           </div>
         </div>
+
+        {/* BMI Calculator */}
+        <BMICalculator />
 
         {/* Micro-CTA Footer */}
         <div className="mt-24 flex flex-col items-center text-center">
