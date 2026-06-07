@@ -1,33 +1,51 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Clinical Pure White: Main light background */
-  --color-background: #F8FAFC;
-  /* Deep Slate Blue: Main typography */
-  --color-foreground: #0F172A;
+  /* Main background (White) */
+  --color-background: #FFFFFF;
+  /* Gris Pizarra: Main body typography */
+  --color-foreground: #2C3E50;
 
-  /* Primary & Brand Colors */
-  --color-primary: #0F172A;
-  --color-primary-slate: #1E293B;
+  /* Primary & Brand Colors (Azul Marino) */
+  --color-primary: #1E295D;
+  --color-primary-hover: #151D42;
 
-  /* Accent Colors (Green Accent) */
-  --color-accent: #17b267;
-  --color-accent-hover: #10854d;
+  /* Accent Colors (Verde Vital) */
+  --color-accent: #43A047;
+  --color-accent-hover: #2E7D32;
 
-  /* Secondary Colors (Soft Sage) */
-  --color-secondary: #F1F5F9;
+  /* Secondary Colors & Light Backgrounds */
+  --color-secondary: #F8F9FA;
   --color-secondary-border: #E2E8F0;
 
-  --font-sans: var(--font-montserrat);
-  --font-anton: var(--font-anton);
+  /* Font mapping for Option B design system */
+  --font-sans: var(--font-open-sans);
+  --font-title: var(--font-montserrat);
+
+  /* Redefining Slate to harmonize with the brand palette (pizarra and navy) */
+  --color-slate-50: #F8F9FA;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #34495E;
+  --color-slate-700: #2C3E50;
+  --color-slate-800: #1B2653;
+  --color-slate-900: #1E295D;
 }
 
-/* Force light mode background across all elements that might inherit body background */
+/* Force light mode backgrounds and typography */
 html,
 body,
 :root {
-  background-color: #F8FAFC !important;
-  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+  color: #2C3E50 !important;
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   color-scheme: light !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title), Arial, Helvetica, sans-serif;
+  color: #1E295D; /* Azul Marino default for titles */
 }

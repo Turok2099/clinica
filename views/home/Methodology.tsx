@@ -3,12 +3,12 @@ import { Microscope, Activity, HeartPulse, ArrowRight } from 'lucide-react';
 
 export default function Methodology() {
   return (
-    <section className="w-full py-24 bg-white relative">
+    <section className="w-full py-24 bg-slate-50 relative">
       <div className="container mx-auto px-6 md:px-12 xl:px-24">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-20 animate-fade-in-up">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-[#0F172A] leading-tight tracking-tight mb-6">
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight mb-6">
             Por qué las dietas fallan y la <span className="text-accent">ciencia médica</span> funciona.
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed font-medium">
@@ -20,11 +20,11 @@ export default function Methodology() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           
           {/* Pillar 1 */}
-          <div className="flex flex-col bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+          <div className="flex flex-col bg-white rounded-3xl p-8 border border-slate-100 shadow-md shadow-slate-200/30 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
               <Microscope className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
-            <h3 className="text-xl font-bold text-[#0F172A] mb-4">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">
               Diagnóstico Biológico y de Receptores
             </h3>
             <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
@@ -38,11 +38,11 @@ export default function Methodology() {
           </div>
 
           {/* Pillar 2 */}
-          <div className="flex flex-col bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 relative overflow-hidden">
+          <div className="flex flex-col bg-white rounded-3xl p-8 border border-slate-100 shadow-md shadow-slate-200/30 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 relative z-10">
               <Activity className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
-            <h3 className="text-xl font-bold text-[#0F172A] mb-4 relative z-10">
+            <h3 className="text-xl font-bold text-slate-900 mb-4 relative z-10">
               Regulación Hormonal Avanzada
             </h3>
             <div className="space-y-4 text-slate-600 text-sm leading-relaxed relative z-10">
@@ -55,7 +55,7 @@ export default function Methodology() {
             </div>
             
             {/* Subtle compliance note */}
-            <div className="mt-8 pt-6 border-t border-slate-200 relative z-10">
+            <div className="mt-8 pt-6 border-t border-slate-100 relative z-10">
               <p className="text-[11px] text-slate-400 font-medium leading-tight">
                 * Utilizamos exclusivamente terapias reguladas internacionalmente (como agonistas de receptores GLP-1 y GIP) bajo estricto criterio y prescripción médica.
               </p>
@@ -63,11 +63,11 @@ export default function Methodology() {
           </div>
 
           {/* Pillar 3 */}
-          <div className="flex flex-col bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
+          <div className="flex flex-col bg-white rounded-3xl p-8 border border-slate-100 shadow-md shadow-slate-200/30 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1">
             <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
               <HeartPulse className="w-7 h-7 text-accent" strokeWidth={2} />
             </div>
-            <h3 className="text-xl font-bold text-[#0F172A] mb-4">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">
               Reprogramación de Estilo de Vida
             </h3>
             <div className="space-y-4 text-slate-600 text-sm leading-relaxed">
@@ -84,10 +84,10 @@ export default function Methodology() {
 
         {/* Micro-CTA Footer */}
         <div className="mt-24 flex flex-col items-center text-center">
-          <p className="text-xl font-bold text-[#0F172A] mb-8">
+          <p className="text-xl font-bold text-slate-900 mb-8">
             El protocolo idóneo para ti depende de tu biología. Descúbrelo en 60 segundos.
           </p>
-          <button className="px-8 py-4 bg-[#0F172A] hover:bg-[#1E293B] text-white font-extrabold rounded-2xl shadow-lg transition-all hover:-translate-y-1 flex justify-center items-center gap-3 cursor-pointer group">
+          <button className="px-8 py-4 bg-primary hover:bg-accent text-white font-extrabold rounded-2xl shadow-lg shadow-primary/20 hover:shadow-accent/30 transition-all duration-300 hover:-translate-y-1 flex justify-center items-center gap-3 cursor-pointer group">
             Evaluar mi Perfil Metabólico
             <ArrowRight className="w-5 h-5 text-accent transition-transform group-hover:translate-x-1" strokeWidth={2} />
           </button>

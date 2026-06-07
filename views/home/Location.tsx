@@ -3,23 +3,23 @@ import { MapPin, Clock, Phone } from 'lucide-react';
 
 export default function Location() {
   return (
-    <section className="bg-white py-24 px-6 md:px-12 xl:px-24">
+    <section className="bg-slate-50 py-24 px-6 md:px-12 xl:px-24">
       <div className="container mx-auto max-w-6xl">
         
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-slate-900 text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-            Nuestra Clínica
+            Nuestra Clínica CIP
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto font-medium">
             Visítanos en instalaciones de primer nivel, diseñadas para brindarte la mejor atención médica en un ambiente seguro y profesional.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 items-stretch bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 shadow-lg shadow-slate-200/50">
+        <div className="grid grid-cols-1 lg:grid-cols-5 items-stretch bg-white rounded-3xl overflow-hidden border border-slate-100/80 shadow-xl shadow-slate-200/50">
           
           {/* Info Column (spans 2) */}
-          <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center space-y-10 relative z-10 bg-slate-50">
+          <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center space-y-10 relative z-10 bg-white">
             
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-slate-900 font-bold text-xl mb-2">

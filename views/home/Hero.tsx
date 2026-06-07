@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 lg:hidden pointer-events-none select-none">
         <Image
           src="https://res.cloudinary.com/dxbtafe9u/image/upload/f_auto,q_auto:eco/v1779234534/hero2_osu881.png"
-          alt="Clínica Hero Mobile Background"
+          alt="CIP - Clínica Integral del Peso Hero Mobile Background"
           fill
           priority
           unoptimized
@@ -31,6 +31,13 @@ export default function Hero() {
           {/* Left Column - Text Content */}
           <div className="w-full lg:w-1/2 flex flex-col items-start text-left space-y-6 lg:space-y-8 pt-[55vh] lg:pt-0">
             <div className="flex flex-col gap-6 w-full">
+              {/* Brand Badge */}
+              <div className="inline-flex items-center gap-2 bg-accent/15 border border-accent/30 px-4 py-1.5 rounded-full w-fit">
+                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                <span className="text-xs lg:text-sm font-extrabold text-accent uppercase tracking-wider">
+                  CIP - Clínica Integral del Peso
+                </span>
+              </div>
               {/* Title: White on mobile, Dark on desktop */}
               <h1 className="text-4xl lg:text-7xl font-extrabold text-white lg:text-slate-900 leading-[1.15] tracking-tight drop-shadow-lg lg:drop-shadow-none">
                 La forma más rápida para bajar de peso
@@ -61,7 +68,7 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <button className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-accent-hover text-slate-900 font-extrabold rounded-2xl shadow-lg shadow-accent/25 transition-all hover:-translate-y-1 hover:shadow-accent/40 flex justify-center items-center gap-2 cursor-pointer">
+              <button className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-accent text-white font-extrabold rounded-2xl shadow-lg shadow-primary/20 hover:shadow-accent/30 transition-all duration-300 hover:-translate-y-1 flex justify-center items-center gap-2 cursor-pointer">
                 Test Online Gratis
                 <ArrowRight className="w-5 h-5" strokeWidth={2} />
               </button>
@@ -75,7 +82,7 @@ export default function Hero() {
             <div className="relative w-full max-w-lg aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-slate-300/50 border-[8px] border-white ring-1 ring-slate-100 transform transition-transform duration-700 hover:scale-[1.02]">
               <Image
                 src="https://res.cloudinary.com/dxbtafe9u/image/upload/f_auto,q_auto:eco/v1779234534/hero2_osu881.png"
-                alt="Clínica Hero Background"
+                alt="CIP - Clínica Integral del Peso Hero Background"
                 fill
                 priority
                 unoptimized
