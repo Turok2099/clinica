@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="md:col-span-5 space-y-6 text-left">
             <a
-              href="#"
+              href="/"
               className="inline-flex items-center bg-white px-5 py-2.5 rounded-2xl shadow-md border border-slate-100/50 hover:scale-[1.02] transition-transform duration-200 w-fit"
             >
               <Image
@@ -39,7 +39,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm font-medium">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="hover:text-accent transition-colors flex items-center gap-1.5"
                 >
                   Inicio
@@ -55,7 +55,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#contacto"
+                  href="/contacto"
                   className="hover:text-accent transition-colors flex items-center gap-1.5"
                 >
                   Contacto / Agendar

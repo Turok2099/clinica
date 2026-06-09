@@ -198,7 +198,7 @@ export default function BMICalculator() {
 
               {/* CTA Link */}
               <a
-                href="#contacto"
+                href="/contacto"
                 className="w-full inline-flex items-center justify-center gap-2 py-4 bg-primary hover:bg-accent text-white font-extrabold rounded-2xl shadow-md shadow-primary/10 hover:shadow-accent/20 transition-all duration-300 hover:-translate-y-0.5 text-sm cursor-pointer group"
               >
                 Recibir Orientación Médica
