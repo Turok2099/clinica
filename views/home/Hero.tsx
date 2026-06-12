@@ -5,12 +5,11 @@ import { Calendar, ArrowRight, Users, Heart, ShieldCheck, BarChart3 } from 'luci
 export default function Hero() {
   return (
     <section className="relative w-full flex flex-col justify-start bg-white overflow-hidden">
-      
-      {/* Upper Hero Image Block */}
-      <div className="relative w-full h-[58vh] md:h-[72vh] bg-slate-950 flex items-center px-6 md:px-12 xl:px-24 overflow-hidden">
+            {/* Upper Hero Image Block */}
+      <div className="relative w-full h-[75vh] md:h-[82vh] min-h-[620px] md:min-h-[760px] bg-slate-950 flex items-center px-6 md:px-12 xl:px-24 overflow-hidden">
         {/* Background Image */}
         <Image
-          src="https://res.cloudinary.com/dxbtafe9u/image/upload/v1780806741/Sin_t%C3%ADtulo_800_x_1000_mm_lbknv9.png"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmKIDbnSYBxjrfgToJZ9ZAf5r7oTbFj36WCU_WJM_lW-JUUvoLagzebanUrDBAJ1ZLaPFz8nTl3URRk67_-NNLbMHR0UDwtKPpn1kt4qx6dIHzdXeR8W9kGCVRLBG3rX1YohHol0U4FFP6cq5mCyGExi5g0OjT52mo5ie66JBmRY5cYuh_553M_fPogZpyaV4wz8YuJrwtTz2Cr1unZNpsyapFEn2KuGdK6wlSzJzIHalk-N_MdKUCjrJ_J8_u6ZK6rUbRWroCCA"
           alt="Clínica Integral del Peso"
           fill
           priority
@@ -20,38 +19,32 @@ export default function Hero() {
         />
 
         {/* Even Dark Overlay for Text legibility */}
-        <div className="absolute inset-0 bg-slate-950/55 z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/55 z-10 pointer-events-none" />
 
         {/* Hero Content Container */}
         <div className="container mx-auto relative z-20 text-left flex flex-col justify-center items-start pt-16 md:pt-20">
           <div className="max-w-3xl animate-fade-in-up">
-            {/* Brand Prefix */}
-            <span className="block text-2xl md:text-5xl lg:text-6xl font-black tracking-wide text-accent font-title mb-1">
-              CIP:
-            </span>
             {/* Main Title */}
-            <h1 className="text-3xl md:text-6xl lg:text-7.5xl font-title font-black text-white leading-[1.1] tracking-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7.5xl font-title font-black text-white leading-none md:leading-[1.1] tracking-tight mb-2">
+              <span className="text-accent">CIP:</span><br />
               Clínica<br />
               Integral<br />
               Del Peso
             </h1>
-            
-            {/* Divider line */}
-            <div className="w-16 h-0.5 md:w-24 md:h-1 bg-accent mt-3 mb-4"></div>
 
-            {/* Subtitle */}
-            <p className="text-sm md:text-2xl text-slate-100 font-sans font-light tracking-wide mb-6 md:mb-10 max-w-xl">
+            {/* Subtitle with border from example */}
+            <p className="text-sm md:text-2xl text-white/90 font-sans font-light tracking-wide mb-8 md:mb-12 max-w-xl border-l-2 border-accent pl-4">
               Tu peso, tu salud.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               {/* Primary button */}
               <a
                 href="https://wa.me/525662980178?text=Hola,%20quiero%20bajar%20de%20peso"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-5 py-3 sm:px-6 sm:py-3.5 bg-accent hover:bg-accent-hover text-white font-extrabold text-xs sm:text-base rounded-xl sm:rounded-2xl shadow-xl shadow-accent/20 hover:shadow-accent-hover/30 transition-all duration-300 hover:-translate-y-0.5 gap-2 group/btn cursor-pointer w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-6 py-4 bg-accent hover:bg-accent-hover text-white font-extrabold text-xs sm:text-base rounded-xl sm:rounded-2xl shadow-xl shadow-accent/20 hover:shadow-accent-hover/30 transition-all duration-300 hover:-translate-y-0.5 gap-2 group/btn cursor-pointer w-full sm:w-auto"
               >
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-white transition-transform duration-300 group-hover/btn:scale-110" />
                 <span>Agenda tu valoración</span>
@@ -60,7 +53,7 @@ export default function Hero() {
               {/* Secondary button */}
               <a
                 href="#servicios"
-                className="inline-flex items-center justify-center px-5 py-3 sm:px-6 sm:py-3.5 border border-white/60 text-white hover:bg-white/10 font-extrabold text-xs sm:text-base rounded-xl sm:rounded-2xl transition-all duration-300 hover:-translate-y-0.5 gap-2 group/btn cursor-pointer w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-6 py-4 border-2 border-white/50 text-white hover:bg-white/10 font-extrabold text-xs sm:text-base rounded-xl sm:rounded-2xl transition-all duration-300 hover:-translate-y-0.5 gap-2 group/btn cursor-pointer w-full sm:w-auto"
               >
                 <span>Conoce nuestros tratamientos</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white transition-transform duration-300 group-hover/btn:translate-x-1" />
