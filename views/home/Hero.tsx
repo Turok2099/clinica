@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Calendar, ArrowRight, Users, Heart, ShieldCheck, BarChart3 } from 'lucide-react';
+import { Calendar, ArrowRight, Heart, Stethoscope, TrendingUp } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -66,46 +66,34 @@ export default function Hero() {
       {/* Floating Overlapping Metrics Card */}
       <div className="w-full px-4 relative z-20 -mt-10 md:-mt-14">
         <div className="w-full max-w-5xl mx-auto bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl shadow-slate-200/50 p-4 md:p-8 border border-slate-100/80">
-          <div className="grid grid-cols-4 divide-x divide-slate-100">
+          <div className="grid grid-cols-3 divide-x divide-slate-100">
             
-            {/* Patients Attended */}
-            <div className="flex flex-col items-center text-center px-1 py-2 md:p-3">
-              <div className="p-2 md:p-3 bg-slate-50 rounded-xl md:rounded-2xl text-accent mb-2 md:mb-3">
-                <Users className="w-5 h-5 md:w-6 md:h-6 stroke-[1.8]" />
+            {/* Profesionales en Salud */}
+            <div className="flex flex-col items-center text-center px-2 py-3 md:p-4">
+              <div className="p-3 bg-slate-50 rounded-2xl text-accent mb-3">
+                <Stethoscope className="w-6 h-6 stroke-[1.8]" />
               </div>
-              <span className="text-[13px] sm:text-2xl md:text-3xl font-black text-accent font-title leading-none">+5,000</span>
-              <span className="text-[9px] sm:text-xs md:text-sm text-slate-500 font-medium mt-1 leading-tight">
-                pacientes<br className="sm:hidden" /> atendidos
+              <span className="text-xs sm:text-base md:text-lg font-bold text-slate-700 font-title leading-tight">
+                Profesionales en Salud
               </span>
             </div>
 
-            {/* Comprehensive Focus */}
-            <div className="flex flex-col items-center text-center px-1 py-2 md:p-3">
-              <div className="p-2 md:p-3 bg-slate-50 rounded-xl md:rounded-2xl text-accent mb-2 md:mb-3">
-                <Heart className="w-5 h-5 md:w-6 md:h-6 stroke-[1.8]" />
+            {/* Enfoque Integral */}
+            <div className="flex flex-col items-center text-center px-2 py-3 md:p-4">
+              <div className="p-3 bg-slate-50 rounded-2xl text-accent mb-3">
+                <Heart className="w-6 h-6 stroke-[1.8]" />
               </div>
-              <span className="text-[13px] sm:text-2xl md:text-3xl font-black text-accent font-title leading-none">100%</span>
-              <span className="text-[9px] sm:text-xs md:text-sm text-slate-500 font-medium mt-1 leading-tight">
-                enfoque<br className="sm:hidden" /> integral
+              <span className="text-xs sm:text-base md:text-lg font-bold text-slate-700 font-title leading-tight">
+                Enfoque Integral
               </span>
             </div>
 
-            {/* Specialized Professionals */}
-            <div className="flex flex-col items-center justify-center text-center px-1 py-2 md:p-3">
-              <div className="p-2 md:p-3 bg-slate-50 rounded-xl md:rounded-2xl text-accent mb-2 md:mb-3">
-                <ShieldCheck className="w-5 h-5 md:w-6 md:h-6 stroke-[1.8]" />
+            {/* Resultados sostenibles */}
+            <div className="flex flex-col items-center text-center px-2 py-3 md:p-4">
+              <div className="p-3 bg-slate-50 rounded-2xl text-accent mb-3">
+                <TrendingUp className="w-6 h-6 stroke-[1.8]" />
               </div>
-              <span className="text-[9px] sm:text-xs md:text-sm lg:text-base text-slate-600 font-bold max-w-[80px] sm:max-w-[150px] leading-tight">
-                Profesionales especializados
-              </span>
-            </div>
-
-            {/* Sustainable Results */}
-            <div className="flex flex-col items-center justify-center text-center px-1 py-2 md:p-3">
-              <div className="p-2 md:p-3 bg-slate-50 rounded-xl md:rounded-2xl text-accent mb-2 md:mb-3">
-                <BarChart3 className="w-5 h-5 md:w-6 md:h-6 stroke-[1.8]" />
-              </div>
-              <span className="text-[9px] sm:text-xs md:text-sm lg:text-base text-slate-600 font-bold max-w-[80px] sm:max-w-[150px] leading-tight">
+              <span className="text-xs sm:text-base md:text-lg font-bold text-slate-700 font-title leading-tight">
                 Resultados sostenibles
               </span>
             </div>
