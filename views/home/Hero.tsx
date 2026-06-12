@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="relative w-full h-[75vh] md:h-[82vh] min-h-[620px] md:min-h-[760px] bg-slate-950 flex items-center px-6 md:px-12 xl:px-24 overflow-hidden">
         {/* Background Image */}
         <Image
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmKIDbnSYBxjrfgToJZ9ZAf5r7oTbFj36WCU_WJM_lW-JUUvoLagzebanUrDBAJ1ZLaPFz8nTl3URRk67_-NNLbMHR0UDwtKPpn1kt4qx6dIHzdXeR8W9kGCVRLBG3rX1YohHol0U4FFP6cq5mCyGExi5g0OjT52mo5ie66JBmRY5cYuh_553M_fPogZpyaV4wz8YuJrwtTz2Cr1unZNpsyapFEn2KuGdK6wlSzJzIHalk-N_MdKUCjrJ_J8_u6ZK6rUbRWroCCA"
+          src="https://res.cloudinary.com/dxbtafe9u/image/upload/v1780806741/Sin_t%C3%ADtulo_800_x_1000_mm_lbknv9.png"
           alt="Clínica Integral del Peso"
           fill
           priority
