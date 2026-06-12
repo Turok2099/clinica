@@ -15,7 +15,7 @@ export default function Hero() {
           priority
           unoptimized
           crossOrigin="anonymous"
-          className="absolute inset-0 object-cover object-center md:object-[center_25%] z-0"
+          className="absolute inset-0 object-cover object-center md:object-center z-0"
         />
 
         {/* Even Dark Overlay for Text legibility */}
