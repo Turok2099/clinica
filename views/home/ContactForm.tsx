@@ -115,10 +115,10 @@ export default function ContactForm() {
                     Teléfono / WhatsApp
                   </p>
                   <a
-                    href="tel:+525512345678"
+                    href="tel:+525662980178"
                     className="text-slate-700 font-bold hover:text-accent transition-colors"
                   >
-                    +52 (55) 1234 5678
+                    +52 56 6298 0178
                   </a>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function ContactForm() {
                       <input
                         id="phone"
                         type="tel"
-                        placeholder="Ej. 55 1234 5678"
+                        placeholder="Ej. 56 6298 0178"
                         className={`w-full px-4 py-3 rounded-xl bg-white border ${errors.phone ? "border-red-500 focus:ring-red-200" : "border-slate-200 focus:border-primary focus:ring-primary/20"} focus:outline-none focus:ring-4 transition-all text-slate-800 font-medium text-sm`}
                         {...register("phone")}
                       />

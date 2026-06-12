@@ -2,11 +2,6 @@
 import React from 'react';
 
 export default function WhatsAppWidget() {
-  const handleWhatsAppClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    alert('Mock de WhatsApp: Aquí se abrirá la ventana de chat nativa de WhatsApp (wa.me/...) o el widget oficial.');
-  };
-
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4 pointer-events-none">
       {/* Tooltip message */}
@@ -18,8 +13,9 @@ export default function WhatsAppWidget() {
 
       {/* Floating Button */}
       <a 
-        href="#" 
-        onClick={handleWhatsAppClick}
+        href="https://wa.me/525662980178?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20el%20tratamiento." 
+        target="_blank"
+        rel="noopener noreferrer"
         className="w-16 h-16 bg-[#25D366] hover:bg-[#20bd5a] rounded-full flex items-center justify-center shadow-2xl shadow-[#25D366]/40 transition-transform duration-300 hover:scale-110 pointer-events-auto cursor-pointer"
         aria-label="Contactar por WhatsApp"
       >

@@ -80,19 +80,19 @@ export default function Footer() {
               <li className="flex gap-2.5 items-center">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
-                  href="tel:+525512345678"
+                  href="tel:+525662980178"
                   className="hover:text-accent transition-colors"
                 >
-                  +52 (55) 1234 5678
+                  +52 56 6298 0178
                 </a>
               </li>
               <li className="flex gap-2.5 items-center">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                 <a
-                  href="mailto:contacto@cipmetabolico.com"
+                  href="mailto:contacto@clinicaintegraldelpeso.com.mx"
                   className="hover:text-accent transition-colors"
                 >
-                  contacto@cipmetabolico.com
+                  contacto@clinicaintegraldelpeso.com.mx
                 </a>
               </li>
             </ul>

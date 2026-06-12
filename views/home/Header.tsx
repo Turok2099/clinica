@@ -1,23 +1,38 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    // Initialize status
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 py-3 md:py-6 bg-white/90 backdrop-blur-md border-b border-slate-100/80 shadow-sm md:absolute md:bg-transparent md:backdrop-blur-none md:border-transparent md:shadow-none transition-all duration-300">
+    <header className="fixed top-0 left-0 w-full z-50 py-3 bg-white/95 backdrop-blur-md border-b border-slate-100/80 shadow-sm transition-all duration-300 md:py-3.5">
       <div className="container mx-auto px-6 md:px-12 xl:px-24 flex items-center justify-between">
         
         {/* Logo (Top Left) */}
-        <a href="/" className="relative w-52 h-12 md:w-56 md:h-12 block">
+        <a href="/" className="relative w-64 h-12 md:w-80 md:h-14 block">
           <Image
             src="https://res.cloudinary.com/dxbtafe9u/image/upload/v1780796434/logotransparente_izk2q7.png"
             alt="CIP - Clínica Integral del Peso"
             fill
-            className="object-contain object-left"
+            className="object-contain object-left scale-110 md:scale-120 origin-left"
             priority
             unoptimized
           />
@@ -36,7 +51,7 @@ export default function Header() {
           {/* Hamburger Menu Button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2.5 md:p-3 bg-white rounded-2xl shadow-md border border-slate-100/50 hover:scale-[1.02] transition-all duration-200 text-slate-700 flex items-center justify-center cursor-pointer"
+            className="p-2.5 md:p-3 bg-white rounded-full shadow-md border border-slate-100/50 hover:scale-[1.02] transition-all duration-200 text-slate-700 flex items-center justify-center cursor-pointer"
             aria-label="Toggle Navigation"
           >
             {isMenuOpen ? <X className="w-5 h-5 md:w-6 md:h-6" /> : <Menu className="w-5 h-5 md:w-6 md:h-6" />}

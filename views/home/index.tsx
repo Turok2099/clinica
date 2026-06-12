@@ -1,5 +1,6 @@
 import Header from './Header';
 import Hero from './Hero';
+import Services from './Services';
 import FightAlone from './FightAlone';
 import Methodology from './Methodology';
 import DoctorProfile from './DoctorProfile';
@@ -13,6 +14,7 @@ export default function HomeView() {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <Services />
         <FightAlone />
         <Methodology />
         <DoctorProfile />

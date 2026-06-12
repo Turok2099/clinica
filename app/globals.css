@@ -11,8 +11,8 @@
   --color-primary-hover: #151D42;
 
   /* Accent Colors (Verde Vital) */
-  --color-accent: #43A047;
-  --color-accent-hover: #2E7D32;
+  --color-accent: #76BC73;
+  --color-accent-hover: #5E9C5B;
 
   /* Secondary Colors & Light Backgrounds */
   --color-secondary: #F8F9FA;
@@ -35,66 +35,68 @@
   --color-slate-900: #1E295D;
 }
 
-/* Force light mode backgrounds and typography */
-html,
-body,
-:root {
-  background-color: #FFFFFF !important;
-  color: #2C3E50 !important;
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  color-scheme: light !important;
-}
+@layer base {
+  /* Force light mode backgrounds and typography */
+  html,
+  body,
+  :root {
+    background-color: #FFFFFF;
+    color: #2C3E50;
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+    color-scheme: light;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-title), Arial, Helvetica, sans-serif;
-  color: #1E295D; /* Azul Marino default for titles */
-}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title), Arial, Helvetica, sans-serif;
+    color: #1E295D; /* Azul Marino default for titles */
+  }
 
-/* 
-  ALTERNATE THEME PALETTE
-  A minimalist, earthy palette for A/B testing against the main navy/green brand.
-*/
-.theme-alt {
-  /* Warm Beige/Greige backgrounds */
-  --color-slate-50: #FAF8F5;
-  --color-slate-100: #F3F0EA;
-  --color-slate-200: #E5E0D5;
-  --color-slate-300: #D0CAC0;
-  
-  /* Muted grays and charcoals for text */
-  --color-slate-400: #9C9890;
-  --color-slate-500: #6E6B65;
-  --color-slate-600: #4A4844;
-  --color-slate-700: #2A2A2A;
-  --color-slate-800: #1A1A1A;
-  --color-slate-900: #0A0A0A;
+  /* 
+    ALTERNATE THEME PALETTE
+    A minimalist, earthy palette for A/B testing against the main navy/green brand.
+  */
+  .theme-alt {
+    /* Warm Beige/Greige backgrounds */
+    --color-slate-50: #FAF8F5;
+    --color-slate-100: #F3F0EA;
+    --color-slate-200: #E5E0D5;
+    --color-slate-300: #D0CAC0;
+    
+    /* Muted grays and charcoals for text */
+    --color-slate-400: #9C9890;
+    --color-slate-500: #6E6B65;
+    --color-slate-600: #4A4844;
+    --color-slate-700: #2A2A2A;
+    --color-slate-800: #1A1A1A;
+    --color-slate-900: #0A0A0A;
 
-  /* Redefining main colors */
-  --color-background: var(--color-slate-50);
-  --color-foreground: var(--color-slate-700);
+    /* Redefining main colors */
+    --color-background: var(--color-slate-50);
+    --color-foreground: var(--color-slate-700);
 
-  /* Primary is now dark charcoal instead of navy */
-  --color-primary: var(--color-slate-900);
-  --color-primary-hover: #000000;
+    /* Primary is now dark charcoal instead of navy */
+    --color-primary: var(--color-slate-900);
+    --color-primary-hover: #000000;
 
-  /* Accent is a subtle sage green/gray */
-  --color-accent: #7C8677; 
-  --color-accent-hover: #5F685B;
+    /* Accent is a subtle sage green/gray */
+    --color-accent: #7C8677; 
+    --color-accent-hover: #5F685B;
 
-  /* Secondary is a slightly darker beige for contrast */
-  --color-secondary: var(--color-slate-100);
-  --color-secondary-border: var(--color-slate-200);
+    /* Secondary is a slightly darker beige for contrast */
+    --color-secondary: var(--color-slate-100);
+    --color-secondary-border: var(--color-slate-200);
 
-  /* Force variables within the alt theme container */
-  background-color: var(--color-background) !important;
-  color: var(--color-foreground) !important;
-}
+    /* Force variables within the alt theme container */
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
 
-.theme-alt h1, 
-.theme-alt h2, 
-.theme-alt h3, 
-.theme-alt h4, 
-.theme-alt h5, 
-.theme-alt h6 {
-  color: var(--color-primary) !important;
+  .theme-alt h1, 
+  .theme-alt h2, 
+  .theme-alt h3, 
+  .theme-alt h4, 
+  .theme-alt h5, 
+  .theme-alt h6 {
+    color: var(--color-primary);
+  }
 }
