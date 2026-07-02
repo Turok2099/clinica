@@ -1,5 +1,5 @@
 import React from "react";
-import { Award, HeartHandshake, Sparkles } from "lucide-react";
+import { ClipboardList, Stethoscope, HeartPulse, HeartHandshake } from "lucide-react";
 
 export default function FightAlone() {
   return (
@@ -22,21 +22,27 @@ export default function FightAlone() {
         {/* Badges */}
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12 animate-fade-in-up">
           <div className="flex items-center gap-3 bg-white/10 px-6 py-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
-            <Award className="w-5 h-5 text-accent" strokeWidth={2.5} />
+            <ClipboardList className="w-5 h-5 text-accent" strokeWidth={2.5} />
             <span className="text-sm font-extrabold !text-white tracking-wide">
-              Médicos Especialistas
+              Evaluación integral y diagnóstico
+            </span>
+          </div>
+          <div className="flex items-center gap-3 bg-white/10 px-6 py-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
+            <Stethoscope className="w-5 h-5 text-accent" strokeWidth={2.5} />
+            <span className="text-sm font-extrabold !text-white tracking-wide">
+              Abordaje Médico integral
+            </span>
+          </div>
+          <div className="flex items-center gap-3 bg-white/10 px-6 py-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
+            <HeartPulse className="w-5 h-5 text-accent" strokeWidth={2.5} />
+            <span className="text-sm font-extrabold !text-white tracking-wide">
+              Esquema de Tratamiento
             </span>
           </div>
           <div className="flex items-center gap-3 bg-white/10 px-6 py-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
             <HeartHandshake className="w-5 h-5 text-accent" strokeWidth={2.5} />
             <span className="text-sm font-extrabold !text-white tracking-wide">
-              Atencion integral y personalizada
-            </span>
-          </div>
-          <div className="flex items-center gap-3 bg-white/10 px-6 py-3.5 rounded-2xl border border-white/10 backdrop-blur-md">
-            <Sparkles className="w-5 h-5 text-accent" strokeWidth={2.5} />
-            <span className="text-sm font-extrabold !text-white tracking-wide">
-              Una nueva forma de perder peso
+              Acompañamiento Continuo
             </span>
           </div>
         </div>

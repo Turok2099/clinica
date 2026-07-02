@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import { Calendar, ArrowRight, Heart, Stethoscope, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
+import { Calendar, ArrowRight, Stethoscope, TrendingUp, HeartPulse } from 'lucide-react';
 
 export default function Hero() {
   return (
     <section className="relative w-full flex flex-col justify-start bg-white overflow-hidden">
-            {/* Upper Hero Image Block */}
+      {/* Upper Hero Image Block */}
       <div className="relative w-full h-[75vh] md:h-[82vh] min-h-[620px] md:min-h-[760px] bg-slate-950 flex items-stretch px-6 md:px-12 xl:px-24 overflow-hidden">
         {/* Background Image */}
         <Image
@@ -53,13 +54,13 @@ export default function Hero() {
               </a>
 
               {/* Secondary button */}
-              <a
-                href="#servicios"
+              <Link
+                href="/tratamientos"
                 className="inline-flex items-center justify-center px-6 py-4 border-2 border-white/50 text-white hover:bg-white/10 font-extrabold text-xs sm:text-base rounded-xl sm:rounded-2xl transition-all duration-300 hover:-translate-y-0.5 gap-2 group/btn cursor-pointer w-full sm:w-auto"
               >
-                <span>Conoce nuestros tratamientos</span>
+                <span>Conoce más sobre tu tratamiento</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white transition-transform duration-300 group-hover/btn:translate-x-1" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -69,24 +70,24 @@ export default function Hero() {
       <div className="w-full px-4 relative z-20 -mt-10 md:-mt-14">
         <div className="w-full max-w-5xl mx-auto bg-white rounded-[2rem] md:rounded-[2.5rem] shadow-xl shadow-slate-200/50 p-4 md:p-8 border border-slate-100/80">
           <div className="grid grid-cols-3 divide-x divide-slate-100">
-            
+
             {/* Profesionales en Salud */}
             <div className="flex flex-col items-center text-center px-2 py-3 md:p-4">
               <div className="p-3 bg-slate-50 rounded-2xl text-accent mb-3">
-                <Stethoscope className="w-6 h-6 stroke-[1.8]" />
+                <HeartPulse className="w-6 h-6 stroke-[1.8]" />
               </div>
               <span className="text-xs sm:text-base md:text-lg font-bold text-slate-700 font-title leading-tight">
-                Profesionales en Salud
+                Abordaje Integral
               </span>
             </div>
 
             {/* Enfoque Integral */}
             <div className="flex flex-col items-center text-center px-2 py-3 md:p-4">
               <div className="p-3 bg-slate-50 rounded-2xl text-accent mb-3">
-                <Heart className="w-6 h-6 stroke-[1.8]" />
+                <Stethoscope className="w-6 h-6 stroke-[1.8]" />
               </div>
               <span className="text-xs sm:text-base md:text-lg font-bold text-slate-700 font-title leading-tight">
-                Enfoque Integral
+                Médicos Certificados
               </span>
             </div>
 

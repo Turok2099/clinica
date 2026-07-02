@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { ClipboardList, HeartPulse, Target } from "lucide-react";
+import { ClipboardList, HeartPulse, Target, ShieldCheck } from "lucide-react";
 
 export default function PillarsCarousel() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -80,19 +80,36 @@ export default function PillarsCarousel() {
           <button
             key={idx}
             onClick={() => scrollToSlide(idx)}
-            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-              activeSlide === idx ? "bg-primary w-6" : "bg-slate-300/80 w-2.5"
-            }`}
+            className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${activeSlide === idx ? "bg-primary w-6" : "bg-slate-300/80 w-2.5"
+              }`}
             aria-label={`Ir a tarjeta ${idx + 1}`}
           />
         ))}
       </div>
 
-      {/* Subtle compliance note below the grid */}
-      <div className="mt-8 text-center max-w-2xl mx-auto mb-12 px-4">
-        <p className="text-[11px] text-slate-400 font-medium leading-relaxed">
-          * Utilizamos exclusivamente terapias médicas reguladas internacionalmente (como agonistas de receptores GLP-1 y GIP) bajo estricto criterio y prescripción médica.
-        </p>
+      {/* High-impact safety & compliance banner */}
+      <div className="mt-16 max-w-4xl mx-auto px-4">
+        <div className="relative bg-gradient-to-br from-primary via-slate-900 to-primary text-white rounded-[2rem] p-8 md:p-12 overflow-hidden border border-slate-800 shadow-2xl shadow-primary/20 group">
+          {/* Background glowing effects */}
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/40 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            {/* Icon Block */}
+            <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-accent/15 rounded-3xl border border-accent/30 flex items-center justify-center text-accent shadow-xl shadow-accent/5">
+              <ShieldCheck className="w-8 h-8 md:w-10 md:h-10" />
+            </div>
+
+            {/* Text Block */}
+            <div className="flex-grow text-center md:text-left">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-[0.25em] text-accent uppercase mb-3">
+                Garantía de Seguridad Médica
+              </span>
+              <p className="text-lg md:text-xl font-sans font-medium leading-relaxed text-slate-100">
+                Utilizamos <strong className="text-white font-extrabold underline decoration-accent decoration-2 underline-offset-4">exclusivamente terapias médicas reguladas internacionalmente</strong> (como agonistas de receptores <span className="text-accent font-bold">GLP-1 y GIP</span>) bajo estricto criterio y prescripción médica.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

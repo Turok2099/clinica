@@ -1,54 +1,15 @@
 import React from 'react';
-import { Apple, Stethoscope, ClipboardList } from 'lucide-react';
-
-const UserHeartIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    {...props}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-    <circle cx="9" cy="7" r="4" />
-    <path d="M19 14c1.49-1.46 3-1.03 3 .75 0 2.25-3 4.25-3 4.25s-3-2-3-4.25c0-1.78 1.5-2.21 3-.75Z" />
-  </svg>
-);
+import { Play } from 'lucide-react';
 
 export default function Services() {
-  const servicesList = [
-    {
-      title: 'Nutrición',
-      description: 'Planes personalizados adaptados a ti.',
-      icon: Apple,
-    },
-    {
-      title: 'Medicina',
-      description: 'Evaluación médica y seguimiento profesional.',
-      icon: Stethoscope,
-    },
-    {
-      title: 'Evaluación integral',
-      description: 'Análisis de composición corporal y metabolismo.',
-      icon: ClipboardList,
-    },
-    {
-      title: 'Acompañamiento',
-      description: 'Apoyo constante en cada paso de tu proceso.',
-      icon: UserHeartIcon,
-    },
-  ];
-
   return (
     <section id="servicios" className="w-full py-20 md:py-28 bg-slate-50/50">
       <div className="container mx-auto px-6 md:px-12 xl:px-24">
-        
+
         {/* Header Block */}
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <span className="inline-block text-xs md:text-sm font-bold tracking-[0.2em] text-accent uppercase mb-3">
-            Atención Integral
+            Abordaje Integral
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-title font-black text-slate-800 leading-tight tracking-tight mb-4">
             Más que bajar de peso, transformamos tu vida.
@@ -58,29 +19,36 @@ export default function Services() {
           </p>
         </div>
 
-        {/* 2x2 Services Grid */}
-        <div className="grid grid-cols-2 gap-3 md:gap-8 max-w-4xl mx-auto">
-          {servicesList.map((service, idx) => {
-            const IconComp = service.icon;
-            return (
-              <div 
-                key={idx}
-                className="flex items-start gap-2.5 sm:gap-5 bg-white p-3.5 sm:p-6 md:p-8 rounded-2xl md:rounded-[2rem] border border-slate-100 shadow-sm shadow-slate-200/30 hover:-translate-y-1 hover:shadow-md transition-all duration-300 group"
+        {/* YouTube Video Mock */}
+        <div className="max-w-4xl mx-auto">
+          <div className="relative aspect-video w-full rounded-[2rem] overflow-hidden shadow-2xl border border-slate-200/50 group bg-slate-950">
+            {/* Background Thumbnail (Mock) */}
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-60 transition-transform duration-700 group-hover:scale-105"
+              style={{ backgroundImage: "url('https://res.cloudinary.com/dxbtafe9u/image/upload/v1780806741/Sin_t%C3%ADtulo_800_x_1000_mm_lbknv9.png')" }}
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent" />
+
+            {/* Play Button Container */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+              <button
+                className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-accent hover:bg-accent-hover text-white flex items-center justify-center shadow-2xl shadow-accent/50 hover:shadow-accent-hover/60 transition-all duration-300 hover:scale-110 cursor-pointer group/play"
+                aria-label="Reproducir video"
               >
-                <div className="flex-shrink-0 p-1.5 sm:p-3.5 md:p-4 bg-slate-50 rounded-xl text-accent group-hover:bg-accent/10 transition-colors duration-300">
-                  <IconComp className="w-4 h-4 sm:w-6 sm:h-6 md:w-7 md:h-7 stroke-[1.8]" />
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-[11px] sm:text-base md:text-xl font-bold text-slate-800 mb-0.5 sm:mb-1 group-hover:text-primary transition-colors leading-tight">
-                    {service.title}
-                  </h3>
-                  <p className="text-[9px] sm:text-xs md:text-sm text-slate-500 leading-snug sm:leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+                <Play className="w-8 h-8 md:w-10 md:h-10 text-white fill-current translate-x-0.5 transition-transform group-hover/play:scale-110" />
+              </button>
+
+              <p className="mt-6 text-white font-title font-bold text-lg md:text-2xl tracking-wide max-w-lg drop-shadow-md">
+                Conoce la historia de Elda
+              </p>
+              <p className="text-white/60 text-xs md:text-sm mt-2">
+                Haz clic para reproducir video
+              </p>
+            </div>
+
+          </div>
         </div>
 
       </div>

@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Calculator } from "lucide-react";
+import { ArrowRight, Calculator, ChevronDown } from "lucide-react";
 
 export default function BMICalculator() {
+  const [isOpen, setIsOpen] = useState(false);
   const [weight, setWeight] = useState(70); // in kg
   const [height, setHeight] = useState(170); // in cm
 
@@ -56,8 +57,21 @@ export default function BMICalculator() {
   );
 
   return (
-    <div className="max-w-5xl mx-auto mb-24 animate-fade-in-up mt-12">
-      <div className="relative bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-slate-200/40 overflow-hidden">
+    <div className="w-full max-w-5xl mx-auto mb-24 mt-12 px-4 flex flex-col items-center">
+      {/* Collapsible Action Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white border-2 border-primary hover:border-primary-hover text-primary hover:text-white hover:bg-primary font-extrabold rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 cursor-pointer text-base md:text-lg mb-4"
+      >
+        <Calculator className="w-5 h-5" />
+        <span>¿Quieres conocer tu IMC?</span>
+        <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      {/* Collapsible Content */}
+      {isOpen && (
+        <div className="w-full mt-4 animate-fade-in-up">
+          <div className="relative bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-slate-200/40 overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 -mt-16 -mr-16 w-72 h-72 bg-accent/5 rounded-full opacity-60 blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 -mb-16 -ml-16 w-72 h-72 bg-primary/5 rounded-full opacity-60 blur-3xl pointer-events-none"></div>
@@ -209,5 +223,7 @@ export default function BMICalculator() {
         </div>
       </div>
     </div>
+  )}
+</div>
   );
 }
