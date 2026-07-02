@@ -12,7 +12,7 @@ export default function DoctorProfile() {
             Respaldados por la Ciencia y la Experiencia
           </span>
           <h2 className="text-slate-900 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-            Conoce al Especialista Detrás de tu Protocolo
+            Conoce a tu especialista.
           </h2>
         </div>
 
@@ -45,10 +45,10 @@ export default function DoctorProfile() {
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
             <p className="text-slate-600 text-lg md:text-xl leading-relaxed mb-10 font-medium">
               La pérdida de peso médica no se trata de seguir una tendencia,
-              sino de entender la biología profunda de tu cuerpo. Nuestro
-              especialista combina décadas de excelencia clínica con una
-              trayectoria directa en la investigación y desarrollo de terapias
-              metabólicas de última generación.
+              sino de entender la biología profunda de tu cuerpo. Nuestros
+              especialistas combinan excelencia clínica con una
+              trayectoria vinculada a la investigación y desarrollo de nuevas terapias
+              metabólicas.
             </p>
 
             {/* Bloques de Datos Clave */}
@@ -63,7 +63,7 @@ export default function DoctorProfile() {
                     Pionero en Ciencia Metabólica (GLP-1 y GIP)
                   </h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
-                    16 años de trayectoria en el área médica de Diabetes y
+                    20 años de trayectoria en el área médica de Diabetes y
                     alteraciones metabólicas.
                   </p>
                 </div>
@@ -82,9 +82,10 @@ export default function DoctorProfile() {
                     Excelencia Clínica y Quirúrgica
                   </h3>
                   <p className="text-slate-600 text-sm leading-relaxed">
-                    Médico con una sólida trayectoria de{" "}
-                    <span className="font-bold text-slate-900">45 años</span> de
-                    práctica médica e intervenciones de alta fidelidad.
+                    Médico con una sólida trayectoria{" "}
+                    en la practica{" "}
+                    <span className="font-bold text-slate-900">pública</span> y {" "}
+                    <span className="font-bold text-slate-900">privada</span>
                   </p>
                 </div>
               </div>

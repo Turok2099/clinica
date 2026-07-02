@@ -46,6 +46,12 @@ export default function Header() {
             <a href="#" className="hover:text-accent transition-colors">Testimonios</a>
             <a href="#" className="hover:text-accent transition-colors">Clínicas</a>
             <a href="/contacto" className="hover:text-accent transition-colors">Contacto</a>
+            <a 
+              href="/portal" 
+              className="px-4 py-1.5 bg-primary text-white rounded-full hover:bg-primary-hover transition text-xs font-semibold shadow-sm shadow-primary/20"
+            >
+              Portal Clínico
+            </a>
           </nav>
 
           {/* Hamburger Menu Button */}
@@ -72,8 +78,11 @@ export default function Header() {
           <a href="#" className="px-6 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-accent transition-colors border-b border-slate-50/50">
             Clínicas
           </a>
-          <a href="/contacto" className="px-6 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-accent transition-colors">
+          <a href="/contacto" className="px-6 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-accent transition-colors border-b border-slate-50/50">
             Contacto
+          </a>
+          <a href="/portal" className="px-6 py-3 text-sm font-bold text-slate-900 hover:bg-slate-50 hover:text-accent transition-colors font-title">
+            Portal Clínico
           </a>
         </div>
       )}

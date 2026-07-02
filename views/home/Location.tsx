@@ -26,22 +26,22 @@ export default function Location() {
   return (
     <section className="bg-slate-50 py-24 px-6 md:px-12 xl:px-24">
       <div className="container mx-auto max-w-6xl">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-slate-900 text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-            Nuestras Clínicas CIP
+            Nuestros Centros CIP
           </h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto font-medium">
-            Visítanos en cualquiera de nuestras sucursales con instalaciones de primer nivel, diseñadas para brindarte la mejor atención médica en un ambiente seguro y profesional.
+            Visítanos en cualquiera de nuestros centros CIP con instalaciones de primer nivel, diseñadas para brindarte la mejor atención médica en un ambiente seguro y profesional.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 items-stretch bg-white rounded-3xl overflow-hidden border border-slate-100/80 shadow-xl shadow-slate-200/50">
-          
+
           {/* Info Column (spans 2) */}
           <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-start space-y-6 relative z-10 bg-white border-r border-slate-50">
-            
+
             <div className="flex items-center gap-3 text-slate-900 font-bold text-xl mb-4">
               <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
                 <Building2 className="w-5 h-5 text-accent" />
@@ -53,16 +53,14 @@ export default function Location() {
               {/* Branch Tab 1: Insurgentes */}
               <button
                 onClick={() => setActiveBranch('insurgentes')}
-                className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                  activeBranch === 'insurgentes'
-                    ? 'bg-accent/5 border-accent shadow-md shadow-accent/5'
-                    : 'bg-white border-slate-100 hover:bg-slate-50/50 hover:border-slate-200'
-                }`}
+                className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${activeBranch === 'insurgentes'
+                  ? 'bg-accent/5 border-accent shadow-md shadow-accent/5'
+                  : 'bg-white border-slate-100 hover:bg-slate-50/50 hover:border-slate-200'
+                  }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className={`font-black text-sm uppercase tracking-wider ${
-                    activeBranch === 'insurgentes' ? 'text-accent' : 'text-slate-400'
-                  }`}>
+                  <span className={`font-black text-sm uppercase tracking-wider ${activeBranch === 'insurgentes' ? 'text-accent' : 'text-slate-400'
+                    }`}>
                     Benito Juárez
                   </span>
                   <MapPin className={`w-4 h-4 ${activeBranch === 'insurgentes' ? 'text-accent' : 'text-slate-300'}`} />
@@ -78,16 +76,14 @@ export default function Location() {
               {/* Branch Tab 2: Coyoacan */}
               <button
                 onClick={() => setActiveBranch('coyoacan')}
-                className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
-                  activeBranch === 'coyoacan'
-                    ? 'bg-accent/5 border-accent shadow-md shadow-accent/5'
-                    : 'bg-white border-slate-100 hover:bg-slate-50/50 hover:border-slate-200'
-                }`}
+                className={`w-full text-left p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${activeBranch === 'coyoacan'
+                  ? 'bg-accent/5 border-accent shadow-md shadow-accent/5'
+                  : 'bg-white border-slate-100 hover:bg-slate-50/50 hover:border-slate-200'
+                  }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className={`font-black text-sm uppercase tracking-wider ${
-                    activeBranch === 'coyoacan' ? 'text-accent' : 'text-slate-400'
-                  }`}>
+                  <span className={`font-black text-sm uppercase tracking-wider ${activeBranch === 'coyoacan' ? 'text-accent' : 'text-slate-400'
+                    }`}>
                     Coyoacán
                   </span>
                   <MapPin className={`w-4 h-4 ${activeBranch === 'coyoacan' ? 'text-accent' : 'text-slate-300'}`} />
@@ -116,10 +112,10 @@ export default function Location() {
           {/* Map Column (spans 3) */}
           <div className="lg:col-span-3 min-h-[450px] relative w-full h-full">
             <div className="absolute inset-0 border-l border-slate-100 pointer-events-none z-10 hidden lg:block" />
-            <iframe 
-              src={currentBranch.mapUrl} 
-              className="absolute inset-0 w-full h-full border-0 grayscale-[15%] contrast-[1.05]" 
-              loading="lazy" 
+            <iframe
+              src={currentBranch.mapUrl}
+              className="absolute inset-0 w-full h-full border-0 grayscale-[15%] contrast-[1.05]"
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
