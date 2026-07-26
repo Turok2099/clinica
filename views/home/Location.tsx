@@ -24,7 +24,7 @@ export default function Location() {
   const currentBranch = branches[activeBranch];
 
   return (
-    <section className="bg-slate-50 py-24 px-6 md:px-12 xl:px-24">
+    <section className="bg-transparent py-24 px-6 md:px-12 xl:px-24">
       <div className="container mx-auto max-w-6xl">
 
         {/* Section Header */}

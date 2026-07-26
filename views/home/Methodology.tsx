@@ -6,7 +6,7 @@ import PillarsCarousel from "./PillarsCarousel";
 
 export default function Methodology() {
   return (
-    <section className="w-full py-24 bg-slate-50 relative">
+    <section className="w-full py-24 bg-transparent relative">
       <div className="container mx-auto px-6 md:px-12 xl:px-24">
 
         {/* Highlighted Phrase / Call to Action */}

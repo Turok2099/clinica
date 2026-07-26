@@ -35,7 +35,7 @@ export default function TratamientosView() {
         </section>
 
         {/* Treatments Grid */}
-        <section className="py-16 md:py-24 px-6 md:px-12 xl:px-24 bg-white relative">
+        <section className="py-16 md:py-24 px-6 md:px-12 xl:px-24 bg-transparent relative">
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
               

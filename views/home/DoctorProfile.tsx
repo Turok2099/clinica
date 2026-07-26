@@ -4,7 +4,7 @@ import { Lightbulb, Stethoscope, Globe, ArrowRight } from "lucide-react";
 
 export default function DoctorProfile() {
   return (
-    <section className="bg-white py-24 px-6 md:px-12 xl:px-24 border-b border-slate-100">
+    <section className="bg-white py-24 px-6 md:px-12 xl:px-24 shadow-sm">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 lg:mb-16 text-left">

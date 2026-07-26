@@ -23,7 +23,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 py-3 bg-white/95 backdrop-blur-md border-b border-slate-100/80 shadow-sm transition-all duration-300 md:py-3.5">
+    <header className="fixed top-0 left-0 w-full z-50 py-3 bg-[rgb(234,234,238)]/95 backdrop-blur-md border-b border-slate-200/60 shadow-sm transition-all duration-300 md:py-3.5">
       <div className="container mx-auto px-6 md:px-12 xl:px-24 flex items-center justify-between">
         
         {/* Logo (Top Left) */}
@@ -57,7 +57,7 @@ export default function Header() {
           {/* Hamburger Menu Button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2.5 md:p-3 bg-white rounded-full shadow-md border border-slate-100/50 hover:scale-[1.02] transition-all duration-200 text-slate-700 flex items-center justify-center cursor-pointer"
+            className="p-2.5 md:p-3 bg-[rgb(234,234,238)] rounded-full shadow-md border border-slate-200/60 hover:scale-[1.02] transition-all duration-200 text-slate-700 flex items-center justify-center cursor-pointer"
             aria-label="Toggle Navigation"
           >
             {isMenuOpen ? <X className="w-5 h-5 md:w-6 md:h-6" /> : <Menu className="w-5 h-5 md:w-6 md:h-6" />}
@@ -68,7 +68,7 @@ export default function Header() {
 
       {/* Mobile/Dropdown Menu */}
       {isMenuOpen && (
-        <div className="absolute top-[70px] md:top-[85px] right-6 md:right-12 xl:right-24 bg-white shadow-xl rounded-2xl border border-slate-100/50 py-3 flex flex-col w-56 overflow-hidden animate-in fade-in slide-in-from-top-4 duration-200">
+        <div className="absolute top-[70px] md:top-[85px] right-6 md:right-12 xl:right-24 bg-[rgb(234,234,238)] shadow-xl rounded-2xl border border-slate-200/60 py-3 flex flex-col w-56 overflow-hidden animate-in fade-in slide-in-from-top-4 duration-200">
           <a href="#" className="px-6 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-accent transition-colors border-b border-slate-50/50">
             Nuestro Método
           </a>

@@ -8,7 +8,7 @@ export default function ContactView() {
   return (
     <>
       <Header />
-      <main className="flex-grow pt-16 md:pt-24 bg-white">
+      <main className="flex-grow pt-16 md:pt-24 bg-transparent">
         <ContactForm />
       </main>
       <Footer />

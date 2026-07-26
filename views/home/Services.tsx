@@ -3,7 +3,7 @@ import { Play } from 'lucide-react';
 
 export default function Services() {
   return (
-    <section id="servicios" className="w-full py-20 md:py-28 bg-slate-50/50">
+    <section id="servicios" className="w-full py-20 md:py-28 bg-transparent">
       <div className="container mx-auto px-6 md:px-12 xl:px-24">
 
         {/* Header Block */}

@@ -68,7 +68,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="w-full py-24 bg-white relative" id="contacto">
+    <section className="w-full py-24 bg-transparent relative" id="contacto">
       <div className="container mx-auto px-6 md:px-12 xl:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Columna Izquierda: Información de Contacto */}

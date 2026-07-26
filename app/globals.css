@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Main background (White) */
-  --color-background: #FFFFFF;
+  /* Main background */
+  --color-background: rgb(234, 234, 238);
   /* Gris Pizarra: Main body typography */
   --color-foreground: #2C3E50;
 
@@ -10,9 +10,9 @@
   --color-primary: #1E295D;
   --color-primary-hover: #151D42;
 
-  /* Accent Colors (Verde Vital) */
-  --color-accent: #76BC73;
-  --color-accent-hover: #5E9C5B;
+  /* Accent Colors (Turquesa / Teal Clínico) */
+  --color-accent: #00A896;
+  --color-accent-hover: #008274;
 
   /* Secondary Colors & Light Backgrounds */
   --color-secondary: #F8F9FA;
@@ -40,7 +40,7 @@
   html,
   body,
   :root {
-    background-color: #FFFFFF;
+    background-color: rgb(234, 234, 238);
     color: #2C3E50;
     font-family: var(--font-sans), Arial, Helvetica, sans-serif;
     color-scheme: light;
@@ -49,54 +49,5 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-title), Arial, Helvetica, sans-serif;
     color: #1E295D; /* Azul Marino default for titles */
-  }
-
-  /* 
-    ALTERNATE THEME PALETTE
-    A minimalist, earthy palette for A/B testing against the main navy/green brand.
-  */
-  .theme-alt {
-    /* Warm Beige/Greige backgrounds */
-    --color-slate-50: #FAF8F5;
-    --color-slate-100: #F3F0EA;
-    --color-slate-200: #E5E0D5;
-    --color-slate-300: #D0CAC0;
-    
-    /* Muted grays and charcoals for text */
-    --color-slate-400: #9C9890;
-    --color-slate-500: #6E6B65;
-    --color-slate-600: #4A4844;
-    --color-slate-700: #2A2A2A;
-    --color-slate-800: #1A1A1A;
-    --color-slate-900: #0A0A0A;
-
-    /* Redefining main colors */
-    --color-background: var(--color-slate-50);
-    --color-foreground: var(--color-slate-700);
-
-    /* Primary is now dark charcoal instead of navy */
-    --color-primary: var(--color-slate-900);
-    --color-primary-hover: #000000;
-
-    /* Accent is a subtle sage green/gray */
-    --color-accent: #7C8677; 
-    --color-accent-hover: #5F685B;
-
-    /* Secondary is a slightly darker beige for contrast */
-    --color-secondary: var(--color-slate-100);
-    --color-secondary-border: var(--color-slate-200);
-
-    /* Force variables within the alt theme container */
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-  }
-
-  .theme-alt h1, 
-  .theme-alt h2, 
-  .theme-alt h3, 
-  .theme-alt h4, 
-  .theme-alt h5, 
-  .theme-alt h6 {
-    color: var(--color-primary);
   }
 }
