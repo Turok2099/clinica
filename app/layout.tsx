@@ -15,6 +15,13 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "CIP - Clínica Integral del Peso | Especialistas en Control Metabólico",
   description: "En CIP (Clínica Integral del Peso) te ayudamos a bajar de peso de forma rápida y segura, sin rebote ni hambre. Nuestro protocolo médico de vanguardia incluye regulación hormonal y supervisión clínica.",
+  openGraph: {
+    images: ["https://res.cloudinary.com/dxbtafe9u/image/upload/v1785115208/d0599204-580f-431e-8d4d-626efbedb2c6.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://res.cloudinary.com/dxbtafe9u/image/upload/v1785115208/d0599204-580f-431e-8d4d-626efbedb2c6.png"],
+  }
 };
 
 export default function RootLayout({
