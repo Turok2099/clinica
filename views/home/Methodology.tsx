@@ -31,8 +31,8 @@ export default function Methodology() {
 
             {/* Text & Content Container (Green Space on right) */}
             <div className="relative z-10 w-full md:w-7/12 lg:w-1/2 p-8 sm:p-10 md:p-12 lg:p-16 flex flex-col justify-center items-start text-left bg-[#00A887]">
-              {/* Decorative accent background element */}
-              <div className="absolute top-0 right-0 -mt-10 -mr-10 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none" />
+              {/* Decorative accent background element (iOS WebKit GPU optimized) */}
+              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-white/25 via-white/10 to-transparent rounded-full blur-2xl -translate-y-1/4 translate-x-1/4 pointer-events-none transform-gpu" />
 
               <span className="relative z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white text-primary text-xs font-black tracking-[0.25em] uppercase mb-5 shadow-sm">
                 COMIENZA HOY
