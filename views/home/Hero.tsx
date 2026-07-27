@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative w-full flex flex-col justify-start bg-transparent overflow-hidden">
       {/* Upper Hero Image Block */}
-      <div className="relative w-full h-[75vh] md:h-[82vh] min-h-[620px] md:min-h-[760px] bg-transparent flex items-stretch px-6 md:px-12 xl:px-24 overflow-hidden">
+      <div className="relative w-full h-[90vh] md:h-[82vh] min-h-[744px] md:min-h-[760px] bg-transparent flex items-stretch px-6 md:px-12 xl:px-24 overflow-hidden">
         {/* Background Image */}
         <Image
           src="https://res.cloudinary.com/dxbtafe9u/image/upload/v1785112428/fondo3_svbly7.svg"
@@ -16,7 +16,7 @@ export default function Hero() {
           priority
           unoptimized
           crossOrigin="anonymous"
-          className="absolute inset-0 object-cover object-[60%_top] md:object-top z-0"
+          className="absolute inset-0 object-cover object-[40%_top] md:object-top z-0"
         />
 
 
