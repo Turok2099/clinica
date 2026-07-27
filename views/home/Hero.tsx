@@ -26,14 +26,15 @@ export default function Hero() {
             <div className="flex flex-col gap-6">
               {/* Eyebrow / Logo */}
               <div className="inline-flex items-center mb-2">
-                <div className="relative w-14 h-14 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-white/60 shadow-md">
+                <div className="relative w-14 h-14 md:w-32 md:h-32 rounded-full bg-white overflow-hidden shadow-md">
                   <Image
-                    src="https://res.cloudinary.com/dxbtafe9u/image/upload/v1785114701/logo_fondo_blanco_leu1xz.svg"
+                    src="https://res.cloudinary.com/dxbtafe9u/image/upload/v1780796434/logotransparente_izk2q7.png"
                     alt="Logo CIP"
                     fill
+                    priority
                     unoptimized
                     crossOrigin="anonymous"
-                    className="object-cover"
+                    className="object-contain p-1.5 md:p-3"
                   />
                 </div>
               </div>
