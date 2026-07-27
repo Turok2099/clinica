@@ -40,7 +40,7 @@ export default function ProtocolCTA() {
   };
 
   return (
-    <div className="mt-24 max-w-5xl mx-auto animate-fade-in-up">
+    <div className="mt-24 max-w-6xl mx-auto animate-fade-in-up">
       <div className="relative bg-gradient-to-br from-slate-900 via-primary to-slate-950 rounded-[2.5rem] p-10 md:p-16 text-left overflow-hidden shadow-2xl shadow-primary/20 border border-slate-800">
         {/* Decorative background gradients */}
         <div className="absolute top-0 right-0 -mt-16 -mr-16 w-80 h-80 bg-accent rounded-full opacity-10 blur-3xl pointer-events-none"></div>

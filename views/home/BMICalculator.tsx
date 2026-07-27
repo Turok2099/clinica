@@ -57,7 +57,7 @@ export default function BMICalculator() {
   );
 
   return (
-    <div className="w-full max-w-5xl mx-auto mb-24 mt-12 px-4 flex flex-col items-center">
+    <div className="w-full max-w-6xl mx-auto mb-24 mt-12 flex flex-col items-center">
       {/* Collapsible Action Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}

@@ -19,7 +19,6 @@ export default function Hero() {
           className="absolute inset-0 object-cover object-[45%_top] md:object-top z-0"
         />
 
-
         {/* Hero Content Container */}
         <div className="container mx-auto relative z-20 text-left flex flex-col justify-between items-start pt-4 pb-16 md:pt-36 md:pb-28 h-full w-full">
           <div className="max-w-3xl h-full flex flex-col justify-between items-start animate-fade-in-up w-full">
@@ -77,46 +76,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Floating Overlapping Metrics Card */}
-      <div className="w-full px-4 relative z-20 -mt-10 md:-mt-14">
-        <div className="w-full max-w-5xl mx-auto bg-primary rounded-[2rem] md:rounded-[2.5rem] shadow-2xl shadow-primary/30 p-4 md:p-8 border border-white/10">
-          <div className="grid grid-cols-3 divide-x divide-white/15">
-
-            {/* Profesionales en Salud */}
-            <div className="flex flex-col items-center text-center px-2 py-3 md:p-4">
-              <div className="p-3 bg-white/10 rounded-2xl text-accent mb-3">
-                <HeartPulse className="w-6 h-6 stroke-[1.8]" />
-              </div>
-              <span className="text-xs sm:text-base md:text-lg font-bold text-white font-title leading-tight">
-                Abordaje Integral
-              </span>
-            </div>
-
-            {/* Enfoque Integral */}
-            <div className="flex flex-col items-center text-center px-2 py-3 md:p-4">
-              <div className="p-3 bg-white/10 rounded-2xl text-accent mb-3">
-                <Stethoscope className="w-6 h-6 stroke-[1.8]" />
-              </div>
-              <span className="text-xs sm:text-base md:text-lg font-bold text-white font-title leading-tight">
-                Médicos Certificados
-              </span>
-            </div>
-
-            {/* Resultados sostenibles */}
-            <div className="flex flex-col items-center text-center px-2 py-3 md:p-4">
-              <div className="p-3 bg-white/10 rounded-2xl text-accent mb-3">
-                <TrendingUp className="w-6 h-6 stroke-[1.8]" />
-              </div>
-              <span className="text-xs sm:text-base md:text-lg font-bold text-white font-title leading-tight">
-                Resultados sostenibles
-              </span>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
     </section>
   );
 }

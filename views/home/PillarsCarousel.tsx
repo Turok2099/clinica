@@ -10,15 +10,14 @@ export default function PillarsCarousel() {
   const handleScroll = () => {
     if (!containerRef.current) return;
     const scrollLeft = containerRef.current.scrollLeft;
-    const width = containerRef.current.offsetWidth - 24; // accounting for gap
+    const width = containerRef.current.offsetWidth;
     const newIndex = Math.round(scrollLeft / width);
     setActiveSlide(Math.min(Math.max(newIndex, 0), 2));
   };
 
   const scrollToSlide = (idx: number) => {
     if (!containerRef.current) return;
-    // On scroll snap, scrolling is relative to viewport offsetWidth
-    const width = containerRef.current.offsetWidth - 24;
+    const width = containerRef.current.offsetWidth;
     containerRef.current.scrollTo({
       left: idx * width,
       behavior: "smooth",
@@ -35,7 +34,7 @@ export default function PillarsCarousel() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Pillar 1 */}
-        <div className="w-[85vw] md:w-auto flex-shrink-0 snap-center flex flex-col bg-primary rounded-3xl p-8 border border-slate-800 shadow-md shadow-slate-900/10 hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 text-left">
+        <div className="w-full md:w-auto flex-shrink-0 snap-center flex flex-col bg-primary rounded-3xl p-8 border border-slate-800 shadow-md shadow-slate-900/10 hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 text-left">
           <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
             <ClipboardList className="w-7 h-7 text-white" strokeWidth={2} />
           </div>
@@ -48,7 +47,7 @@ export default function PillarsCarousel() {
         </div>
 
         {/* Pillar 2 */}
-        <div className="w-[85vw] md:w-auto flex-shrink-0 snap-center flex flex-col bg-primary rounded-3xl p-8 border border-slate-800 shadow-md shadow-slate-900/10 hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 relative overflow-hidden text-left">
+        <div className="w-full md:w-auto flex-shrink-0 snap-center flex flex-col bg-primary rounded-3xl p-8 border border-slate-800 shadow-md shadow-slate-900/10 hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 relative overflow-hidden text-left">
           <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 relative z-10">
             <HeartPulse className="w-7 h-7 text-white" strokeWidth={2} />
           </div>
@@ -61,7 +60,7 @@ export default function PillarsCarousel() {
         </div>
 
         {/* Pillar 3 */}
-        <div className="w-[85vw] md:w-auto flex-shrink-0 snap-center flex flex-col bg-primary rounded-3xl p-8 border border-slate-800 shadow-md shadow-slate-900/10 hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 text-left">
+        <div className="w-full md:w-auto flex-shrink-0 snap-center flex flex-col bg-primary rounded-3xl p-8 border border-slate-800 shadow-md shadow-slate-900/10 hover:shadow-xl transition-all duration-300 md:hover:-translate-y-1 text-left">
           <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
             <Target className="w-7 h-7 text-white" strokeWidth={2} />
           </div>
@@ -88,7 +87,7 @@ export default function PillarsCarousel() {
       </div>
 
       {/* High-impact safety & compliance banner */}
-      <div className="mt-16 max-w-4xl mx-auto px-4">
+      <div className="mt-16 max-w-6xl mx-auto">
         <div className="relative bg-gradient-to-br from-primary via-slate-900 to-primary text-white rounded-[2rem] p-8 md:p-12 overflow-hidden border border-slate-800 shadow-2xl shadow-primary/20 group">
           {/* Background glowing effects */}
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/40 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
