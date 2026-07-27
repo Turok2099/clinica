@@ -39,6 +39,7 @@ async function run() {
   console.log(`Leyendo migración desde: ${migrationPath}`);
   const sqlContent = fs.readFileSync(migrationPath, 'utf8');
 
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   const { Client } = require('pg');
   const client = new Client({ 
     connectionString: databaseUrl,

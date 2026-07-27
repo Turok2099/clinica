@@ -7,7 +7,7 @@ const connectionString = process.env.DATABASE_URL || 'postgresql://postgres:dumm
 
 // Cliente nativo de PostgreSQL usando postgres.js con soporte para Tagged Templates y Serverless
 export const sql = postgres(connectionString, {
-  ssl: process.env.DATABASE_URL ? 'require' : false,
+  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false,
   max: 10,
   idle_timeout: 20,
   connect_timeout: 10,

@@ -41,6 +41,7 @@ async function run() {
   }
 
   console.log('Conectando a la base de datos Supabase para sembrar datos...');
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
   const client = new Client({ 
     connectionString: databaseUrl,
     ssl: { rejectUnauthorized: false }
