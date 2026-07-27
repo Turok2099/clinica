@@ -5,7 +5,7 @@ import { Calendar, ArrowRight, Stethoscope, TrendingUp, HeartPulse } from 'lucid
 
 export default function Hero() {
   return (
-    <section className="relative w-full flex flex-col justify-start bg-transparent overflow-hidden">
+    <section className="relative w-full flex flex-col justify-start bg-transparent overflow-hidden pt-[72px] md:pt-[84px]">
       {/* Upper Hero Image Block */}
       <div className="relative w-full h-[90vh] md:h-[82vh] min-h-[744px] md:min-h-[760px] bg-transparent flex items-stretch px-6 md:px-12 xl:px-24 overflow-hidden">
         {/* Background Image */}
@@ -16,7 +16,7 @@ export default function Hero() {
           priority
           unoptimized
           crossOrigin="anonymous"
-          className="absolute inset-0 object-cover object-[40%_top] md:object-top z-0"
+          className="absolute inset-0 object-cover object-top z-0"
         />
 
 
