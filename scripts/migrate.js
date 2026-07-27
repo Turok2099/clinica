@@ -1,7 +1,6 @@
 // scripts/migrate.js
 const fs = require('fs');
 const path = require('path');
-const { neon } = require('@neondatabase/serverless');
 
 // Función para cargar variables de entorno de .env.local de forma manual
 function loadEnv() {
@@ -35,19 +34,16 @@ async function run() {
     process.exit(1);
   }
 
-  console.log('Conectando a la base de datos Neon...');
-  const sql = neon(databaseUrl);
-
+  console.log('Conectando a la base de datos Supabase...');
   const migrationPath = path.join(__dirname, '..', 'migrations', '001_initial_schema.sql');
   console.log(`Leyendo migración desde: ${migrationPath}`);
   const sqlContent = fs.readFileSync(migrationPath, 'utf8');
 
-  // Separar comandos por punto y coma, pero teniendo cuidado con los bloques DO $$ ... $$;
-  // Para bases de datos en Neon con el cliente simple 'neon', podemos ejecutar consultas.
-  // Pero la forma más segura de ejecutar un script DDL largo con bloques DO es usar el cliente 'Client' de @neondatabase/serverless,
-  // ya que permite ejecutar scripts multi-sentencia de forma nativa en una sola llamada.
-  const { Client } = require('@neondatabase/serverless');
-  const client = new Client({ connectionString: databaseUrl });
+  const { Client } = require('pg');
+  const client = new Client({ 
+    connectionString: databaseUrl,
+    ssl: { rejectUnauthorized: false }
+  });
   
   try {
     await client.connect();

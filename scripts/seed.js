@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
-const { Client } = require('@neondatabase/serverless');
+const { Client } = require('pg');
 
 function loadEnv() {
   const envPath = path.join(__dirname, '..', '.env.local');
@@ -40,8 +40,11 @@ async function run() {
     process.exit(1);
   }
 
-  console.log('Conectando a la base de datos Neon para sembrar datos...');
-  const client = new Client({ connectionString: databaseUrl });
+  console.log('Conectando a la base de datos Supabase para sembrar datos...');
+  const client = new Client({ 
+    connectionString: databaseUrl,
+    ssl: { rejectUnauthorized: false }
+  });
   
   try {
     await client.connect();

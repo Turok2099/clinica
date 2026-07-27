@@ -1,25 +1,29 @@
 // lib/db.ts
-import { neon } from '@neondatabase/serverless';
+import postgres from 'postgres';
 
-const connectionString = process.env.DATABASE_URL;
+// Proveemos un valor de respaldo temporal ("dummy") para evitar que el compilador
+// (Next.js build) falle si no encuentra la variable de entorno en tiempo de construcción.
+const connectionString = process.env.DATABASE_URL || 'postgresql://postgres:dummy@localhost:5432/postgres';
 
-if (!connectionString) {
-  throw new Error('DATABASE_URL is not set in environment variables.');
-}
-
-// Cliente nativo de base de datos Postgres de Neon usando SQL puro (con tag function)
-// De acuerdo con la directriz 'Neon Data Architect', usamos el tag function nativo.
-// El driver de Neon retorna un array de filas para consultas SQL estructuradas.
-export const sql = neon(connectionString);
+// Cliente nativo de PostgreSQL usando postgres.js con soporte para Tagged Templates y Serverless
+export const sql = postgres(connectionString, {
+  ssl: process.env.DATABASE_URL ? 'require' : false,
+  max: 10,
+  idle_timeout: 20,
+  connect_timeout: 10,
+});
 
 // Helper para ejecutar consultas SQL seguras con tipado de retorno
 export async function query<T = any>(
   strings: TemplateStringsArray,
   ...values: any[]
 ): Promise<T[]> {
+  if (!process.env.DATABASE_URL) {
+    throw new Error('DATABASE_URL is not set in environment variables (Runtime Error).');
+  }
+  
   try {
-    // La función neon permite usarse como tagged template
-    // Ejemplo: const users = await query`SELECT * FROM users WHERE email = ${email}`;
+    // postgres.js permite pasar directamente el TemplateStringsArray y sus valores
     const result = await sql(strings, ...values);
     return result as unknown as T[];
   } catch (error) {
