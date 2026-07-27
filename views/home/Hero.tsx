@@ -16,31 +16,37 @@ export default function Hero() {
           priority
           unoptimized
           crossOrigin="anonymous"
-          className="absolute inset-0 object-cover object-top z-0"
+          className="absolute inset-0 object-cover object-[45%_top] md:object-top z-0"
         />
 
 
         {/* Hero Content Container */}
-        <div className="container mx-auto relative z-20 text-left flex flex-col justify-between items-start pt-24 pb-16 md:pt-36 md:pb-28 h-full w-full">
+        <div className="container mx-auto relative z-20 text-left flex flex-col justify-between items-start pt-4 pb-16 md:pt-36 md:pb-28 h-full w-full">
           <div className="max-w-3xl h-full flex flex-col justify-between items-start animate-fade-in-up w-full">
             <div className="flex flex-col gap-6">
-              {/* Eyebrow */}
-              <div className="inline-flex items-center gap-3">
-                <span className="h-1.5 w-8 bg-accent rounded-full"></span>
-                <span className="text-accent font-extrabold uppercase tracking-[0.25em] text-xs md:text-sm">
-                  CIP
-                </span>
+              {/* Eyebrow / Logo */}
+              <div className="inline-flex items-center mb-2">
+                <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden border-2 border-white/60 shadow-md">
+                  <Image
+                    src="https://res.cloudinary.com/dxbtafe9u/image/upload/v1785114701/logo_fondo_blanco_leu1xz.svg"
+                    alt="Logo CIP"
+                    fill
+                    unoptimized
+                    crossOrigin="anonymous"
+                    className="object-cover"
+                  />
+                </div>
               </div>
               
               {/* Main Title */}
-              <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-title font-black text-slate-900 leading-[1.05] tracking-tight">
+              <h1 className="text-[40px] md:text-7xl lg:text-[5.5rem] font-title font-black text-slate-900 leading-[1.05] tracking-tight">
                 Clínica<br />
                 Integral<br />
                 <span className="text-primary">Del Peso.</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="text-lg md:text-2xl text-slate-600 font-sans font-medium tracking-wide max-w-lg leading-relaxed border-l-4 border-accent/40 pl-5">
+              <p className="text-base md:text-2xl text-slate-600 font-sans font-medium tracking-wide max-w-lg leading-relaxed border-l-4 border-accent/40 pl-5">
                 Tu peso, tu salud.
               </p>
             </div>
